@@ -16,17 +16,17 @@ public class RandomCalculation {
     public static int ValueA;
     public static int ValueB;
 
-    List<Integer> list= new ArrayList<>();
+    List<Integer> list = new ArrayList<>();
 
-    public int RandomNum(int a){
+    public int RandomNum(int a) {
         Random random = new Random();
         a = random.nextInt(100);
         return a;
     }
 
-    public int RandomTrueSlot(){
+    public int RandomTrueSlot() {
         Random random = new Random();
-        return random.nextInt(3)+1;
+        return random.nextInt(3) + 1;
     }
 
     public List<Integer> RandomList() {
@@ -38,33 +38,33 @@ public class RandomCalculation {
         return list;
     }
 
-    public int getTrueAnswer(){
+    public int getTrueAnswer() {
         RandomNum(ValueA);
         RandomNum(ValueB);
-        TrueAnswer=ValueA+ValueB;
+        TrueAnswer = ValueA + ValueB;
         return TrueAnswer;
     }
 
-    public void SetTrueAnswer(){
-        int trueSlot=RandomTrueSlot();
-        int trueAnswer=getTrueAnswer();
-        switch (trueSlot){
+    public void SetTrueAnswer() {
+        int trueSlot = RandomTrueSlot();
+        int trueAnswer = getTrueAnswer();
+        switch (trueSlot) {
             case 1:
-                Answer1=trueAnswer;
+                Answer1 = trueAnswer;
                 break;
             case 2:
-                Answer2=trueAnswer;
+                Answer2 = trueAnswer;
                 break;
             case 3:
-                Answer3=trueAnswer;
+                Answer3 = trueAnswer;
                 break;
             case 4:
-                Answer4=trueAnswer;
+                Answer4 = trueAnswer;
                 break;
         }
     }
 
-    public static String getFormula(){
-        return (ValueA+"+"+ValueB);
+    public static String getFormula() {
+        return (ValueA + "+" + ValueB);
     }
 }
